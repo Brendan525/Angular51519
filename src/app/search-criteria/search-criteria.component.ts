@@ -150,6 +150,17 @@ export class SearchCriteriaComponent implements OnInit {
 
   requestMoreInfo = (pokemon) => {
     pokemon.moreInfo = !pokemon.moreInfo;
+    let releaseDate = '';
+   let i;
+   for (i = 0; i < 4; i++) {
+     releaseDate += pokemon.release_date[i];
+   };
+   pokemon.releaseYear = releaseDate;
+   console.log("this is pokemon.releaseYear from the for loop: " + pokemon.releaseYear);
+
+   console.log("this is pokemon :" + pokemon.release_date);
+
+   console.log("this is pokemon.moreInfo :" + pokemon.moreInfo);
     console.log(pokemon);
   };
 
